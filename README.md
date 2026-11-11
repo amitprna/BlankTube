@@ -11,15 +11,36 @@ Watch the YouTube video you came for, without the feed, recommendations and auto
 
 ## Install
 
-Works in Chrome, Edge, Brave and other Chromium browsers.
+Free, about two minutes. Works in Chrome, Edge, Brave and other Chromium browsers.
 
-1. On this page, click **Code → Download ZIP**, then unzip the file.
-2. Open `chrome://extensions` (Edge: `edge://extensions`).
-3. Turn on **Developer mode**.
-4. Click **Load unpacked** and choose the unzipped folder (the one with `manifest.json` in it).
-5. Reload any open YouTube tab.
+1. **Download.** At the top of this page, click the green **Code** button, then **Download ZIP**.
+   A file called `BlankTube-main.zip` is saved to your Downloads folder.
+2. **Unzip it somewhere you'll keep it**, for example your Documents folder.
+   - Windows: right-click the file → **Extract All** → **Extract**.
+   - Mac: double-click the file.
 
-Stuck? Paste this page's link into an AI agent such as Claude Code and ask it to walk you through installing the extension.
+   Keep this folder. The browser runs the extension from it, so if you delete or move the folder, the extension stops working.
+3. **Open the extensions page.** Copy one of these into the address bar and press Enter:
+   - Chrome: `chrome://extensions`
+   - Edge: `edge://extensions`
+   - Brave: `brave://extensions`
+4. **Turn on Developer mode.** It's a switch at the top right of the page (in Edge, on the left).
+5. **Click Load unpacked.** In the window that opens, go into the folder you unzipped and select the folder
+   that has `manifest.json` inside it, then click **Select Folder**.
+   On Windows this is often a `BlankTube-main` folder inside another `BlankTube-main` folder.
+6. **Pin the button.** Click the puzzle-piece icon next to the address bar, then the pin next to **Blank Tube**.
+   This button opens the on/off switches.
+7. **Reload YouTube.** Refresh any open YouTube tab. The home page should now be blank apart from the search bar.
+
+<details>
+<summary>Something went wrong?</summary>
+
+- **"Manifest file is missing or unreadable":** you chose the wrong folder. Pick the one with `manifest.json` directly inside it.
+- **YouTube looks the same:** refresh the YouTube tab, or close it and open YouTube again.
+- **The browser warns about developer-mode extensions:** this is normal for extensions installed from a ZIP. Choose to keep it.
+- **Still stuck:** paste this page's link into an AI agent such as Claude Code and ask it to walk you through installing the extension.
+
+</details>
 
 ## Features
 
@@ -64,7 +85,8 @@ That is only because the speed keys work on videos on every site. Everything els
 <details>
 <summary>Update or remove</summary>
 
-- **Update:** download the new ZIP, replace the folder, then click the reload arrow on the Blank Tube card in `chrome://extensions`.
+- **Update:** download the ZIP again, unzip it, and copy its files over the ones in your Blank Tube folder.
+  Then click the reload arrow on the Blank Tube card in `chrome://extensions`. Your switches are kept.
 - **Remove:** click **Remove** on the Blank Tube card.
 
 </details>
