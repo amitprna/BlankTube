@@ -1,0 +1,48 @@
+/* Each part is hidden unless its switch is turned off in the panel (settings.js marks <html> then). */
+
+/* 1. Home page: no feed. The top bar (search) and left menu stay. */
+html:not([data-ytf-off-homefeed]) ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html:not([data-ytf-off-homefeed]) ytd-browse[page-subtype="home"] #chips-wrapper,
+html:not([data-ytf-off-homefeed]) ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer {
+  display: none !important;
+}
+
+/* 2. Watch page: no recommendations on the right (or below, on narrow windows).
+   Playlists and live chat in the same column are left alone. */
+html:not([data-ytf-off-recommendations]) ytd-watch-flexy #related,
+html:not([data-ytf-off-recommendations]) ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* 3. End of video: no suggested-video tiles or end cards. */
+html:not([data-ytf-off-endscreen]) .html5-endscreen,
+html:not([data-ytf-off-endscreen]) .ytp-endscreen-content,
+html:not([data-ytf-off-endscreen]) .videowall-endscreen,
+html:not([data-ytf-off-endscreen]) .ytp-ce-element,
+html:not([data-ytf-off-endscreen]) .ytp-autonav-endscreen-countdown-overlay,
+html:not([data-ytf-off-endscreen]) .ytp-fullscreen-grid,
+html:not([data-ytf-off-endscreen]) .ytp-fullscreen-grid-stills-container {
+  display: none !important;
+}
+
+/* 4. Left menu: no Shorts entry (full menu and the narrow icon-only menu).
+   YouTube gives it no link address, only its label, so this matches the English label "Shorts". */
+html:not([data-ytf-off-shortslink]) ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html:not([data-ytf-off-shortslink]) ytd-mini-guide-entry-renderer:has(a[title="Shorts"]),
+html:not([data-ytf-off-shortslink]) ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+  display: none !important;
+}
+
+/* 5. Top bar: no notification bell (only shown when signed in). */
+html:not([data-ytf-off-notifications]) ytd-notification-topbar-button-renderer,
+html:not([data-ytf-off-notifications]) #masthead #buttons button[aria-label^="Notifications"] {
+  display: none !important;
+}
+
+/* 6. Shorts: one Short only. No scrolling to the next one, no up/down buttons. */
+html:not([data-ytf-off-shortsscroll]) ytd-shorts #shorts-container {
+  overflow: hidden !important;
+}
+html:not([data-ytf-off-shortsscroll]) ytd-shorts .navigation-container {
+  display: none !important;
+}
